@@ -1,0 +1,176 @@
+/* RESEEET */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+/* EPAAAAAAAAAAAAA */
+
+.body{
+	box-sizing: border-box;
+}
+.cabezera{
+	background: #FAFA17;
+}
+.logo {
+  text-align: center;
+  width: 100%;
+}
+.logo img{
+  width: 35px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+	background: #C1D009;
+}
+
+.buscador{
+  width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+.menu form{
+	width: 55%;
+}
+.menu input{
+  width: 90%;
+	border: 1px solid #9B9B95;
+	border-radius: 2px;
+	margin-right: 3px;
+}
+h1{
+	font-size: 30px;
+}
+main{
+	margin: 10px;
+}
+
+.questions li:first-child{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.questions li:last-child{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.questions {
+  margin-bottom: 1px;
+  padding: 20px;
+}
+.questions li{
+	background: #C5C6BB;
+	margin-bottom: 1px;
+	padding: 5px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.questions li:hover{
+	background: #9B9B95;
+}
+.questions a{
+	font-size: 20px;
+}
+
+.answers {
+	padding: 20px;
+}
+.answers h2{
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+.answers p{
+	font-size: 16px;
+}
+.answers article{
+	margin-bottom: 10px;
+}
+
+.pie_pagina{
+	background: #F2F2EB;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+}
+.pie_pagina ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.pie_pagina li{
+	text-align: center;
+}
+.pie_pagina a{
+	font-size: 12px;
+	margin: 5px;
+	text-align: center;
+	color: 444;
+}
+
+
+
+
+
+
+
+
+
+/* .. */
