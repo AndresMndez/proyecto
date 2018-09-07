@@ -54,15 +54,14 @@ a{
 }
 /* EPAAAAAAAAAAAAA */
 
-
-*{
+body{
 	box-sizing: border-box;
+	background-color: #E5E5D7;
 }
-
-/* CABEZERA */
 .cabezera{
 	background: #FAFA17;
 	height: 80px;
+	margin-bottom: 10px;
 }
 .logo {
   text-align: center;
@@ -72,7 +71,6 @@ a{
   width: 47px;
 }
 
-/* NAV DEL MENU */
 .menu{
   display: flex;
   flex-direction: row;
@@ -82,7 +80,7 @@ a{
   margin-bottom: 10px;
 	background: #C1D009;
 }
-/* BUSCADOR DEL NAV */
+
 .buscador{
   width: 50%;
 	display: flex;
@@ -91,7 +89,6 @@ a{
 	align-items: center;
 
 }
-/* CAJA DEL BUSCADOR */
 .menu form{
 	width: 55%;
 }
@@ -100,59 +97,50 @@ a{
 	border: 1px solid #9B9B95;
 	border-radius: 2px;
 	margin-right: 3px;
-} /*AQUI TERMINA EL LA CABEZERA */
-
-/* CUERPO PRINCIPAL DE PAGINA DE PREGUNTAS */
-main{
-	margin: 10px;
 }
 
-h1{
-	font-size: 30px;
-}
-/* CUADRO DE PREGUNTAS  */
-.questions li:first-child{
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-}
-.questions li:last-child{
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-.questions {
-  margin-bottom: 1px;
-  padding: 20px;
-}
-.questions li{
-	background: #C5C6BB;
-	margin-bottom: 1px;
-	padding: 5px;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.questions li:hover{ /*CAMBIO DE COLOR SOBRE EL MOUSE EN PREGUNTAS*/
-	background: #9B9B95;
-}
-.questions a{
-	font-size: 20px;
-}
-
-.answers {
-	padding: 20px;
-}
-.answers h2{
-	font-size: 20px;
-	margin-bottom: 15px;
-}
-.answers p{
-	font-size: 16px;
-}
-.answers article{
+.product{
+	width: 40%;
+	position: relative;
 	margin-bottom: 10px;
 }
 
+.product img{
+	width: 100%;
+	border-radius: 10px;
+}
+
+.product:hover{
+  /* tranformamos el elemento al pasar el mouse por encima al doble de
+  su tamaño con scale(2). */
+  transform : scale(1.1);
+  -moz-transform : scale(1.1);      /* Firefox */
+  -webkit-transform : scale(1.1);   /* Chrome - Safari */
+  -o-transform : scale(1.1);			/* Opera */
+}
+.product-inside{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	color: #fff;
+	margin-bottom: 35px;
+}
+
+.product-inside:hover{
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+}
+
+.articles{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+/* ESTE ES STYLE DE PIE DE PAGGINA */
 .pie_pagina{
 	background: #F2F2EB;
 	height: 60px;
@@ -171,15 +159,4 @@ h1{
 	font-size: 12px;
 	margin: 5px;
 	text-align: center;
-	color: 444;
-}
-
-
-
-
-
-
-
-
-
-/* .. */
+	col
