@@ -48,28 +48,81 @@ table {
 	border-spacing: 0;
 }
 a{
-  list-style: none;
   text-decoration: none;
   color: #000;
 }
-/* EPAAAAAAAAAAAAA */
+a:hover {
+	text-decoration: none;
 
+}
+/* CSS GENENRAL */
 
 *{
 	box-sizing: border-box;
 }
 
+body{/*Agrego para poder manejar todo con em*/
+	font-size: 10px;
+	min-width: 330px;
+}
+body { background-color: #F7F7F0;width:100%;	background-image: url(../images/carta.png);}
+main{
+ 	margin:0 auto;
+	/* background-image: url(../images/carta.png); */
+
+	background-size: cover;
+}
+main{
+	margin: 10px;
+}
+
+button{
+	border-radius: 5px;
+}
+h1 {	font-size: 4em;font-family: 'Merriweather', serif;}
+h2 {	font-size: 3em;font-family: 'Merriweather', serif;}
+h3 {	font-size: 2em;font-family: 'Merriweather', serif;}
+h4 {	font-size: 1.8em;font-family: 'Merriweather', serif;}
+h1{
+	display: flex;
+ 	justify-content: center;
+ 	background-color:grey;
+	padding: 20px;
+ 	width:100%;
+ 	margin: 0 auto;
+}​​
+
 /* CABEZERA */
 .cabezera{
 	background: #FAFA17;
 	height: 80px;
+	margin-bottom: 20px;
 }
 .logo {
-  text-align: center;
+	display: flex;
+  flex-direction: row;
+	align-items:center;
   width: 100%;
+}
+.logo a{
+	margin:0 auto;
+}
+
+.logo a:last-child{
+	margin:0;
 }
 .logo img{
   width: 47px;
+}
+.logo button{
+	background-color: ;
+}
+.fas.fa-bars{
+	align-self: flex-end;
+}
+.fas.fa-bars:hover{
+	font-size: 1.6em;
+	color:grey;
 }
 
 /* NAV DEL MENU */
@@ -82,6 +135,13 @@ a{
   margin-bottom: 10px;
 	background: #C1D009;
 }
+
+.log_in{
+	display: none;
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+}
+
 /* BUSCADOR DEL NAV */
 .buscador{
   width: 50%;
@@ -89,8 +149,18 @@ a{
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-
 }
+
+.fas.fa-search{
+	padding: 10px;
+	padding-right: 30px;
+}
+
+/* ESTA LINEA LE DA MARGEN A LAS LINES DE MENU MOBILE */
+.fa-bars:before {
+	margin-right: 10px;
+}
+
 /* CAJA DEL BUSCADOR */
 .menu form{
 	width: 55%;
@@ -100,25 +170,85 @@ a{
 	border: 1px solid #9B9B95;
 	border-radius: 2px;
 	margin-right: 3px;
-} /*AQUI TERMINA EL LA CABEZERA */
+}
+
+
+/*AQUI TERMINA EL LA CABEZERA */
+
+/* PAGINA DE REGISTRO */
+.Registros {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+}
+.Registros form{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+}
+
+/*____________________________*/
+
+/*Arranca Cuerpo del Home Mobile*/
+
+.Home {	margin: 10 auto; }
+.Home .row {	border: 4px solid black; margin:0; display: flex; flex-direction: column; align-items: center;}
+.Home .row h1 {	width:100%;	font-size: 4em; text-align: center; margin: 10px 0;} /*Centra el titutlo en la pagina*/
+
+/*Secciones Propagandas y Categorias en general*/
+.Home .row .col-md-8 {	width: 98%; padding:10px; border: 2px solid Grey; border-radius:5px;  } /*Esto saca la forma de ocupar 8 espacios de doce Bootstrap*/
+
+/*Arranca Seccion Propaganda*/
+.Home .row .col-md-8 .Propaganda article {	width:98%; padding:10px;position: relative; overflow:visible; }
+.Propaganda article img { width:100%;margin: 0 auto;}
+.Propaganda article p { width: 100%; position: absolute; background-color: rgba(0,0,0,0.5); bottom:47.5%; text-align: center; color:white;}
+.Propaganda article h4 {	position:absolute; right:0; width:25%;}
+.p2, .p3 {	display: none;}/*Por el momento las saco*/
+/*Finaliza seccion Propagada*/
+
+/*Arranca Seccion Categorias*/
+.Home .row .col-md-8 .Categorias
+.Categorias { width: 100%;}
+.Categorias h3 {  width:100%;margin-bottom:3px; margin-top:3px;}
+.Categorias h3 a { border: 1px solid black; width:100%;}
+.Categorias article {	display:flex; flex-direction: row;}
+.Categorias article .Articulo {width:48%; position:relative; margin:0; overflow: visible; border: 2px solid #f2f2f2; border-radius: 3px;display: flex; flex-direction: column;align-items: center;}
+.Categorias article .Articulo img { width:100%;}
+.Categorias article .Articulo p {	position:absolute;bottom: 0; color:#fff; background-color: rgba(0,0,0,0.5); width:98%; text-align: center; margin-bottom:5px;}
+
+/*Finaliza seccion Categorias*/
+/*Finaliza seccion Propagandas y Categorias*/
+
+/*Arranca seccion Navcategorias*/
+.Home .row .col-md-4 .navcategorias { display:none;}
+
+
+/*Termin el Cuerpo del home Mobile*/
+/*____________________________*/
+
 
 /* CUERPO PRINCIPAL DE PAGINA DE PREGUNTAS */
-main{
-	margin: 10px;
+
+#principal_pregunta{
+	font-size: 30px;
+	font-family: 'Merriweather', serif;
+	background-color: inherit;
+}
+.main_preguntas{
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	background-image: none;
 }
 
-h1{
-	font-size: 30px;
-}
 /* CUADRO DE PREGUNTAS  */
-.questions li:first-child{
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-}
-.questions li:last-child{
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
+
 .questions {
   margin-bottom: 1px;
   padding: 20px;
@@ -132,32 +262,172 @@ h1{
 	align-items: center;
 	justify-content: center;
 }
+
+.questions li:first-child{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.questions li:last-child{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
 .questions li:hover{ /*CAMBIO DE COLOR SOBRE EL MOUSE EN PREGUNTAS*/
 	background: #9B9B95;
+}
+.questions h2{
+	font-family: 'Merriweather', serif;
 }
 .questions a{
 	font-size: 20px;
 }
-
+ /* CAJA DE RESPUESTAS */
 .answers {
 	padding: 20px;
 }
 .answers h2{
 	font-size: 20px;
 	margin-bottom: 15px;
+	font-family: 'Merriweather', serif;
 }
 .answers p{
 	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
 }
 .answers article{
 	margin-bottom: 10px;
+}/*AQUI TERMINA EL CSS DEL MAIN*/
+
+/* ESTE ES EL CSS DE LA PAGINA DE NOTEBOOKS */
+#notebooks{
+	background-color: inherit;
+	font-size: 5em;
+}
+.articles{
+	background-image: none;
+}
+.product{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: #fff;
+	border: 1px solid #000;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	height: 60vh;
+}
+.product img{
+	width: 98%;
+	border-radius: 10px;
+}
+.product-inside{
+	width:40%;
+	margin: 0;
+	align-self: center;
+}
+.product:hover{
+  /* tranformamos el elemento al pasar el mouse por encima al doble de
+  su tamaño con scale(1.1). */
+	z-index: 1000;
+  transform : scale(1.1);
+  -moz-transition : scale(1.1);      /* Firefox */
+  -webkit-transition : scale(1.1);   /* Chrome - Safari */
+  -o-transition : scale(1.1);			/* Opera */
+}
+   /*CAJA DE ADENTRO QUE CONTINE EL PRECIO Y TITULO DEL PRODUCTO*/
+/* .product-inside{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	color: #fff;
+	margin-bottom: 35px;
+} */
+
+.product-inside:hover{
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
 }
 
+.articles{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}/*AQUI TERMINO LA PAGINA DE NOTEBOOKS*/
+
+/* CAJA DE CATEGORIAS */
+.menu_lateral{
+	display: none;
+}
+
+/*------------------- Arranca Pagina Log_in --------------------------*/
+
+.caja_formulario{
+ 	background-color: rgba(12, 0, 0, 0.5);
+ 	color: white;
+ 	width: 90%;
+	display: flex;
+ 	border-radius: 10px;
+ 	padding: 10px;
+	margin: 0 auto;
+}
+.datos{
+ 	margin:20px;
+	flex-direction: row;
+ 	width: 100%;
+}
+.dato_interno{
+ 	margin-bottom: 10px;
+ 	width: 100%;
+}
+.dato_interno input{
+ 	width: 90%;
+ 	height: 30px;
+}
+.registrarse{
+	font-family: 'Open Sans', sans-serif;
+}
+.iniciar, .registrarse{
+ 	margin-bottom: 20px;
+}
+.iniciar a, .registrarse a{
+	font-family: 'Open Sans', sans-serif;
+ 	font-size: 2em;
+ 	color: #fff;
+}
+.boton{
+ display:flex;
+ flex-direction: row;
+ align-items: center;
+}
+.boton a{
+	color:blue;
+	color:white;
+	font-size: 1.7em;
+}
+
+.dato_interno i{
+  font-size: 2em;
+  padding-right: 2px;
+  width: 23px;
+  height: 23px;
+}
+
+/*---------------------FInaliza Log_in------------------------*/
+
+/* ------------------- ESTE ES EL FOOTEER --------------------*/
 .pie_pagina{
-	background: #F2F2EB;
+	background: #AAAAA0;
 	height: 60px;
 	display: flex;
 	justify-content: center;
+	border-top: 1px solid #929291;
+	margin-top: 30px;
 }
 .pie_pagina ul{
 	display: flex;
@@ -173,13 +443,203 @@ h1{
 	text-align: center;
 	color: 444;
 }
+a, p{
+	font-family: 'Open Sans', sans-serif;
+}
+/*-------------------- INICIO MEDIA QUERY -----------------*/
+	/*-------------Arranca REsponsive para Tablets------------------*/
+@media (min-width: 768px) {
+	/*Afecata Cabezeras en general*/
+	header{
+		margin-bottom: 10px;
+	}
+	.menu{
+		height: 40px;
+	}
+	.logo img{
+		width: 58px;
+	}
+	.menu input{
+		height: 30px;
+	}
+	.menu form a{
+		font-size: 1.5em;
+	}
+	.logo a i{
+		display: none;
+	}
+	.log_in{
+		display: inline-block;
+		font-size: 1.1em;
+	}
+	.barras, .login_bar{
+		font-size: 1.5em;
+	}
+	/*-----------Finaliza Responsive table Cabezera----------------*/
+
+	/*Inician los responsives para Tablets de Main en cada html*/
+
+	/*Inicia Responsive Tablets para Main de preguntas.html*/
+	#principal_pregunta{
+		font-size: 4em;
+		align-self: flex-start;
+		margin-left: 40px;
+		background-color: inherit;
+	}
+	.questions{
+		width: 90%;
+	}
+	.questions a{
+		font-size: 2.5em;
+	}
+	.answers h2{
+		font-size: 2.5em;
+	}
+	.answers p{
+		font-size: 1.6em;
+	}
+	/*Finaliza Responsive Tablets para Main de preguntas.hmtl*/
+
+
+	/*Inicia Responsive Tablets para Main de ecommerce-home.html*/
+	.Home {	}
+	.Home .row {	 margin:0;   display:flex; flex-direction: row;align-items: flex-start;}
+	.Home .row .col-md-8 { width: 66.66666667%;  }
+	.Home .row .col-md-4  {	 width: 20.333%; margin:0 0 0 0;padding:10px; border: 2px solid Grey; border-radius:5px; margin-right:0;  }
+	.Home .row .col-md-4 .navcategorias {	display: contents;}
+	.Home .row .col-md-4 .navcategorias h3 {	width: 30%; margin:0; text-align: right;}
+	.Home .row .col-md-4 .navcategorias ul {	width:30%;margin:0;}
 
 
 
 
+	/*Finaliza Responsive Tablets para Main de ecommerce-home.html*/
+/*Responsive para registros y login*/
+.dato_interno{
+	width: 95%;
+	display: flex;
+	justify-content: center;
+}
+
+.dato_interno i{
+font-size: 30px;
+margin-right: 20px;
+}
+	form{
+		display: flex;
+		align-content: center;
+}
+	.caja_formulario{
+		justify-content: center;
+		width:80%;
+		margin: 0 auto;
+}
+	div.datos{
+		display:block;
+		justify-content: center;
+}
+	button{
+		justify-content: flex-start;
+}
+a{
+	text-align: center;
+}
 
 
 
+/*Finaliza el responsive para registros y login.*/
 
+	/*Finalizan los responsives para Tablets de Main en cada html*/
+	/* RESPONSIVE PARA LA TABLET DE LA PAGINA NOTEBOOKS */
+	.articles{
+		margin: 10px;
+	}
+	.product{
+		width: 45%;
+		position: relative;
+		margin-bottom: 10px;
+	}
 
-/* .. */
+	.product-inside{
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.2);
+		color: #fff;
+		margin-bottom: 35px;
+	}
+
+	/*Responsive General para Pie de ¨Pagina*/
+	.pie_pagina a {
+		font-size: 1.5em;
+		font-family: 'Merriweather', serif;
+	}
+
+	/*-----------------FInaliza Responsive para Tablets------------------------*/
+}
+@media (min-width: 1200px){
+	body{
+		background-color: #F7F7F0;
+	}
+	main{
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+
+	.answers{
+		border: 1px solid #000;
+		background: #fff;
+		width: 90%;
+		border-radius: 5px;
+	}
+	/* PAGINA DE NOTEBOOKS RESPONSIVE DESKTOP */
+	.principal{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+	.articles{
+		width: 70%;
+		margin: 10px;
+	}
+	.product{
+		width: 30%;
+		position: relative;
+		margin-bottom: 10px;
+	}
+
+	.product img{
+		height: auto;
+	}
+
+	.product-inside{
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.2);
+		color: #fff;
+		margin-bottom: 35px;
+	}
+
+	.menu_lateral{
+		display: block;
+		width: 25%;
+		font-size: 2em;
+	}
+	.menu_lateral ul{
+		border: 1px solid #001;
+		border-radius: 5px;
+		padding: 15px;
+		height: 500px;
+		background-color: #fff;
+	}
+	.menu_lateral li{
+		margin-bottom: 15px;
+	}
+}
+	/* -----------TERMINA EL RESPONSIVE DE NOTEBOOK -----------*/
