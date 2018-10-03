@@ -65,7 +65,7 @@ body{/*Agrego para poder manejar todo con em*/
 	font-size: 10px;
 	min-width: 330px;
 }
-body { background-color: #F7F7F0;width:100%;	background-image: url(../images/carta.png);}
+body { background-color: #F7F7F0;width:100%;	/*background-image: url(../images/carta.png);*/}
 main{
  	margin:0 auto;
 	/* background-image: url(../images/carta.png); */
@@ -126,9 +126,9 @@ h1{
 }
 
 /* NAV DEL MENU */
-header{
+/* header{
 	background: #C1D009;
-}
+} */
 .menu{
 	background: #C1D009;
 	display: flex;
@@ -470,15 +470,11 @@ a, p{
 	header{
 		margin-bottom: 10px;
 	}
-	.menu{
-		height: 40px;
-	}
+
 	.logo img{
 		width: 58px;
 	}
-	.menu input{
-		height: 30px;
-	}
+
 	.menu form a{
 		font-size: 1.5em;
 	}
@@ -640,7 +636,7 @@ a{
 		width: 100%;
 		background: rgba(0, 0, 0, 0.2);
 		color: #fff;
-		margin-bottom: 35px;
+		margin-bottom: 5px;
 	}
 
 	.menu_lateral{
